@@ -20,3 +20,6 @@ openssl x509 -in %CN%.crt -noout -text
 
 ### Verify chain untrusted: sef-signed 
 openssl verify -verbose  -CAfile root.crt  %CN%.crt
+
+### Extract chain  
+openssl s_client -servername example.com -connect example.com:443
